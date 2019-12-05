@@ -55,3 +55,12 @@ resource "azurerm_kubernetes_cluster" "aksid" {
     Environment = "Production"
   }
 }
+resource "azurerm_api_management" "apimid" {
+  name                = "apim${local.alias}"
+  location            = "${azurerm_resource_group.rgid.location}"
+  resource_group_name = "${azurerm_resource_group.rgid.name}"
+  publisher_name      = "Microsoft"
+  publisher_email     = "company@terraform.io"
+
+  sku_name = "Developer_1"
+}
