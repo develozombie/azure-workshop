@@ -4,22 +4,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vistagateway
+  name: customers
   labels:
-    app: vistagateway
+    app: customers
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: vistagateway
+      app: customers
   template:
     metadata:
       labels:
-        app: vistagateway
+        app: customers
     spec:
       containers:
-      - name: vistagateway
-        image: acreucdcprd08.azurecr.io/vistagateway
+      - name: customers
+        image: acrjoyapu.azurecr.io/customers
         #args:
         #- -listen=:8080
         #- '-text=Hi from #ytt apple'
@@ -39,12 +39,12 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: vistagateway
+  name: customers
 spec:
   selector:
-    app: vistagateway
+    app: customers
   ports:
-  - port: 8084
-    targetPort: 8084
+  - port: 80
+    targetPort: 9001
 
 
