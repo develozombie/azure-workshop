@@ -1,0 +1,5 @@
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\ProductsAPIServices
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=ProductsAPIServices
+--content-root=C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\ProductsAPIServices
+--file=

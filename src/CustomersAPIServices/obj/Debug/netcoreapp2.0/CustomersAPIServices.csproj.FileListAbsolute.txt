@@ -1,0 +1,10 @@
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\CustomersAPIServices\bin\Debug\netcoreapp2.0\CustomersAPIServices.deps.json
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\CustomersAPIServices\bin\Debug\netcoreapp2.0\CustomersAPIServices.runtimeconfig.json
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\CustomersAPIServices\bin\Debug\netcoreapp2.0\CustomersAPIServices.runtimeconfig.dev.json
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\CustomersAPIServices\bin\Debug\netcoreapp2.0\CustomersAPIServices.dll
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\CustomersAPIServices\bin\Debug\netcoreapp2.0\CustomersAPIServices.pdb
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\CustomersAPIServices\obj\Debug\netcoreapp2.0\CustomersAPIServices.csproj.CoreCompileInputs.cache
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\CustomersAPIServices\obj\Debug\netcoreapp2.0\CustomersAPIServices.AssemblyInfoInputs.cache
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\CustomersAPIServices\obj\Debug\netcoreapp2.0\CustomersAPIServices.AssemblyInfo.cs
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\CustomersAPIServices\obj\Debug\netcoreapp2.0\CustomersAPIServices.dll
+C:\Users\joyapu\Proyectos\Demos\src\APIGatewayDemo\CustomersAPIServices\obj\Debug\netcoreapp2.0\CustomersAPIServices.pdb
