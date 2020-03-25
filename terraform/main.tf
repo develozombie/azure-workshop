@@ -4,20 +4,27 @@ resource "azurerm_resource_group" "rgid" {
   name     = "rg${local.alias}"
   location = "${local.region}"
 }
+resource "azurerm_container_registry" "acr" {
+  name                     = "acr${local.alias}01"
+  location                 = azurerm_resource_group.rgid.location
+  resource_group_name      = azurerm_resource_group.rgid.name
+  sku                      = "Basic"
+  admin_enabled            = true
+}
 resource "azurerm_virtual_network" "vnetid" {
   name                = "vnet${local.alias}"
-  location            = "${azurerm_resource_group.rgid.location}"
-  resource_group_name = "${azurerm_resource_group.rgid.name}"
-  address_space       = ["10.0.0.0/16"]
+  location            = azurerm_resource_group.rgid.location
+  resource_group_name = azurerm_resource_group.rgid.name
+  address_space       = ["11.0.0.0/16"]
 
   subnet {
     name           = "default"
-    address_prefix = "10.0.1.0/24"
+    address_prefix = "11.0.1.0/24"
   }
 
   subnet {
     name           = "subnet2"
-    address_prefix = "10.0.2.0/24"
+    address_prefix = "11.0.2.0/24"
   }
 }
 
@@ -30,7 +37,7 @@ resource "azurerm_kubernetes_cluster" "aksid" {
   agent_pool_profile {
     name            = "default"
     count           = local.workers
-    vm_size         = "${local.instancia}"
+    vm_size         = local.instancia
     os_type         = "Linux"
     min_count       = local.workers
     max_count       = 5
@@ -42,8 +49,8 @@ resource "azurerm_kubernetes_cluster" "aksid" {
   }
 
   service_principal {
-    client_id     = "${local.clientid}"
-    client_secret = "${local.clientsecret}"
+    client_id     = local.clientid
+    client_secret = local.clientsecret
   }
 
   network_profile {
