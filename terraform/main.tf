@@ -1,3 +1,7 @@
+provider "azurerm" {
+  # whilst the `version` attribute is optional, we recommend pinning to a given version of the Provider
+  features {}
+}
 data "azurerm_subscription" "current" {}
 
 resource "azurerm_resource_group" "rgid" {
