@@ -6,7 +6,7 @@ data "azurerm_subscription" "current" {}
 
 resource "azurerm_resource_group" "rgid" {
   name     = "rg${local.alias}"
-  location = "${local.region}"
+  location = local.region
 }
 resource "azurerm_container_registry" "acr" {
   name                     = "acr${local.alias}01"
@@ -38,11 +38,10 @@ resource "azurerm_kubernetes_cluster" "aksid" {
   resource_group_name = azurerm_resource_group.rgid.name
   dns_prefix          = "aks${local.alias}pe"
 
-  agent_pool_profile {
+  default_node_pool {
     name            = "default"
-    count           = local.workers
+    node_count      = local.workers
     vm_size         = local.instancia
-    os_type         = "Linux"
     min_count       = local.workers
     max_count       = 5
     os_disk_size_gb = 30
